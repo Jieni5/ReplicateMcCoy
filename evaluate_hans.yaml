@@ -1,0 +1,39 @@
+exp: TextClassification
+
+mode:
+  - evaluate
+  - analyze
+
+# ===== Evaluate =====
+model:
+  - /PATH/to/models/run01
+  - /PATH/to/models/run02
+  - /PATH/to/models/run03
+  # ... add all 20 runs
+
+# HANS input must be a TSV with these columns at minimum:
+# textid, text=premise, pair=hypothesis, target
+# + condition columns used for analysis: heuristic, consistency
+#
+# NOTE: To mimic the paper's binary evaluation, set `target` to:
+#   "entailment" or "non-entailment".
+# The model is 3-way (E/C/N). Keep giveAllLabels=true so you can post-hoc
+# collapse predictions (C or N) → "non-entailment" during analysis.
+datafpath: /PATH/to/data/hans/hans_with_conditions.tsv
+predfpath: ./preds/hans/{model_name}.tsv
+
+id2label: { "0": "entailment", "1": "contradiction", "2": "neutral" }
+giveAllLabels: true
+
+# ===== Analyze =====
+# Provide the same HANS file so metrics can be computed by condition
+resultsfpath: ./results/hans_bycond.tsv
+predfpath: ./preds/hans/{model_name}.tsv
+datafpath: /PATH/to/data/hans/hans_with_conditions.tsv
+save: by_cond
+
+# Split metrics by the two factors needed for Figure 7
+conditions:
+  - heuristic        # values: lexical_overlap, subsequence, constituent
+  - consistency      # values: consistent, inconsistent
+

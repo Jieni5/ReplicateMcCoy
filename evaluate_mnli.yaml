@@ -1,0 +1,21 @@
+exp: TextClassification
+
+mode:
+  - evaluate
+  - analyze
+
+# ===== Evaluate =====
+model:
+  - /PATH/to/models/run01
+  - /PATH/to/models/run02
+  - /PATH/to/models/run03
+  # ... add all 20 runs
+
+datafpath: ./ReplicateMcCoy/data/MNLI_dataset.tsv   
+predfpath: ../ReplicateMcCoy/preds/mnli_pred.tsv
+
+giveAllLabels: false
+resultsfpath: ../ReplicateMcCoy/results/mnli_bytarget.tsv
+save: by_target                                 
+
+

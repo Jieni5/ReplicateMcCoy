@@ -1,0 +1,22 @@
+exp: TextClassification
+
+mode:
+  - evaluate
+  - analyze
+
+# ===== Evaluate =====
+model:
+  - /PATH/to/models/run01
+  - /PATH/to/models/run02
+  - /PATH/to/models/run03
+  # ... add all 20 runs
+
+datafpath: ./ReplicateMcCoy/data/HANS_dataset.tsv   
+predfpath: ../ReplicateMcCoy/preds/hans_pred.tsv
+
+giveAllLabels: false
+conditions: condition
+resultsfpath: ../ReplicateMcCoy/results/hans_bytarget.tsv
+save: by_target, by_cond                                  
+
+
