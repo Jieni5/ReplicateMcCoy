@@ -29,7 +29,9 @@ models:
 
 
 datafpath: ../midterm/ReplicateMcCoy/data/HANS_dataset.tsv
+
 predfpath: ../midterm/ReplicateMcCoy/predictions/hans_pred.tsv
+
 resultsfpath: ../midterm/ReplicateMcCoy/results/hans_results.tsv
 
 id2label:
@@ -37,7 +39,7 @@ id2label:
     1: non-entailment
     2: non-entailment
 
-conditions: condition, target
+conditions: target, condition
 
 save: by_cond
 

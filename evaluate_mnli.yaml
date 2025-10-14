@@ -37,13 +37,13 @@ resultsfpath: ../midterm/ReplicateMcCoy/results/mnli_bytarget.tsv
 giveAllLabels: False
 
 id2label:
-    0: contradiction
-    1: entailment
+    0: entailment
+    1: contradiction
     2: neutral 
 
-save: by_cond
-
 conditions: target
+
+save: by_cond
 
 device: cuda
 

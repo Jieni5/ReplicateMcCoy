@@ -1,0 +1,47 @@
+exp: TextClassification
+
+mode:
+  - evaluate
+  - analyze
+
+models:
+    hf_text_classification_model:
+        - ../midterm/ReplicateMcCoy/models/bert_00
+        - ../midterm/ReplicateMcCoy/models/bert_01
+        - ../midterm/ReplicateMcCoy/models/bert_02
+        - ../midterm/ReplicateMcCoy/models/bert_03
+        - ../midterm/ReplicateMcCoy/models/bert_04
+        - ../midterm/ReplicateMcCoy/models/bert_05
+        - ../midterm/ReplicateMcCoy/models/bert_06
+        - ../midterm/ReplicateMcCoy/models/bert_07
+        - ../midterm/ReplicateMcCoy/models/bert_08
+        - ../midterm/ReplicateMcCoy/models/bert_09
+        - ../midterm/ReplicateMcCoy/models/bert_10
+        - ../midterm/ReplicateMcCoy/models/bert_11
+        - ../midterm/ReplicateMcCoy/models/bert_12
+        - ../midterm/ReplicateMcCoy/models/bert_13
+        - ../midterm/ReplicateMcCoy/models/bert_14
+        - ../midterm/ReplicateMcCoy/models/bert_15
+        - ../midterm/ReplicateMcCoy/models/bert_16
+        - ../midterm/ReplicateMcCoy/models/bert_17
+        - ../midterm/ReplicateMcCoy/models/bert_18
+        - ../midterm/ReplicateMcCoy/models/bert_19
+
+
+datafpath: ../midterm/ReplicateMcCoy/data/HANS_dataset.tsv
+
+predfpath: ../midterm/ReplicateMcCoy/predictions/hans_pred.tsv
+
+resultsfpath: ../midterm/ReplicateMcCoy/results/hans_results.tsv
+
+id2label:
+    0: entailment
+    1: non-entailment
+    2: non-entailment
+
+conditions: target, condition
+
+save: by_cond
+
+device: cuda
+
