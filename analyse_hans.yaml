@@ -33,7 +33,7 @@ predfpath: ../midterm/ReplicateMcCoy/predictions/hans_pred.tsv
 
 resultsfpath: ../midterm/ReplicateMcCoy/results/hans_results.tsv
 
-conditions: heuristic
+conditions: heuristic, target
 
 save: by_cond
 
