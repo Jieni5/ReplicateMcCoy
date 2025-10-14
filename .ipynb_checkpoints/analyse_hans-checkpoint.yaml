@@ -1,7 +1,6 @@
 exp: TextClassification
 
 mode:
-  - evaluate
   - analyze
 
 models:
@@ -44,4 +43,3 @@ id2label:
     2: non-entailment
 
 device: cuda
-

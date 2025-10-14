@@ -34,14 +34,14 @@ predfpath: ../midterm/ReplicateMcCoy/predictions/hans_pred.tsv
 
 resultsfpath: ../midterm/ReplicateMcCoy/results/hans_results.tsv
 
+conditions: condition
+
+save: by_cond
+
 id2label:
     0: entailment
     1: non-entailment
     2: non-entailment
-
-conditions: target, condition
-
-save: by_cond
 
 device: cuda
 
