@@ -37,5 +37,7 @@ giveAllLabels: True
 
 save: by_cond
 
-conditions: condition 
+conditions: condition
+
+device: cuda
 

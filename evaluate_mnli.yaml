@@ -39,4 +39,6 @@ save: by_cond
 
 conditions: target
 
+device: cuda
+
 
