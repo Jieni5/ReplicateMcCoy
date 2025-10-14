@@ -1,4 +1,4 @@
-target	textid	text	pair	condition
+target	textid	text	pair	heuristic
 non-entailment	1	The president advised the doctor .	The doctor advised the president .	lexical
 non-entailment	2	The student saw the managers .	The managers saw the student .	lexical
 non-entailment	3	The presidents encouraged the banker .	The banker encouraged the presidents .	lexical
