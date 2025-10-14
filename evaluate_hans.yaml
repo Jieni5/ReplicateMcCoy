@@ -4,36 +4,38 @@ mode:
   - evaluate
   - analyze
 
-# ===== Evaluate =====
 model:
-  - /PATH/to/models/run01
-  - /PATH/to/models/run02
-  - /PATH/to/models/run03
-  # ... add all 20 runs
+  - ../midterm/ReplicateMcCoy/models/bert_00
+  - ../midterm/ReplicateMcCoy/models/bert_01
+  - ../midterm/ReplicateMcCoy/models/bert_02
+  - ../midterm/ReplicateMcCoy/models/bert_03
+  - ../midterm/ReplicateMcCoy/models/bert_04
+  - ../midterm/ReplicateMcCoy/models/bert_05
+  - ../midterm/ReplicateMcCoy/models/bert_06
+  - ../midterm/ReplicateMcCoy/models/bert_07
+  - ../midterm/ReplicateMcCoy/models/bert_08
+  - ../midterm/ReplicateMcCoy/models/bert_09
+  - ../midterm/ReplicateMcCoy/models/bert_10
+  - ../midterm/ReplicateMcCoy/models/bert_11
+  - ../midterm/ReplicateMcCoy/models/bert_12
+  - ../midterm/ReplicateMcCoy/models/bert_13
+  - ../midterm/ReplicateMcCoy/models/bert_14
+  - ../midterm/ReplicateMcCoy/models/bert_15
+  - ../midterm/ReplicateMcCoy/models/bert_16
+  - ../midterm/ReplicateMcCoy/models/bert_17
+  - ../midterm/ReplicateMcCoy/models/bert_18
+  - ../midterm/ReplicateMcCoy/models/bert_19
 
-# HANS input must be a TSV with these columns at minimum:
-# textid, text=premise, pair=hypothesis, target
-# + condition columns used for analysis: heuristic, consistency
-#
-# NOTE: To mimic the paper's binary evaluation, set `target` to:
-#   "entailment" or "non-entailment".
-# The model is 3-way (E/C/N). Keep giveAllLabels=true so you can post-hoc
-# collapse predictions (C or N) → "non-entailment" during analysis.
-datafpath: /PATH/to/data/hans/hans_with_conditions.tsv
-predfpath: ./preds/hans/{model_name}.tsv
+
+datafpath: ../midterm/ReplicateMcCoy/data/HANS_dataset.tsv
+predfpath: ../midterm/ReplicateMcCoy/predictions/hans_pred.tsv
+resultsfpath: ../midterm/ReplicateMcCoy/results/hans_results.tsv
 
 id2label: { "0": "entailment", "1": "contradiction", "2": "neutral" }
-giveAllLabels: true
 
-# ===== Analyze =====
-# Provide the same HANS file so metrics can be computed by condition
-resultsfpath: ./results/hans_bycond.tsv
-predfpath: ./preds/hans/{model_name}.tsv
-datafpath: /PATH/to/data/hans/hans_with_conditions.tsv
+giveAllLabels: True
+
 save: by_cond
 
-# Split metrics by the two factors needed for Figure 7
-conditions:
-  - heuristic        # values: lexical_overlap, subsequence, constituent
-  - consistency      # values: consistent, inconsistent
+conditions: condition 
 
