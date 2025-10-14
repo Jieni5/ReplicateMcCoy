@@ -41,7 +41,7 @@ id2label:
     1: contradiction
     2: neutral 
 
-conditions: target
+conditions: target, condition
 
 save: by_cond
 
