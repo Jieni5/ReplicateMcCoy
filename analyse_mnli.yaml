@@ -1,7 +1,6 @@
 exp: TextClassification
 
 mode:
-  - evaluate
   - analyze
 
 models:
@@ -27,21 +26,15 @@ models:
         - ../midterm/ReplicateMcCoy/models/bert_18
         - ../midterm/ReplicateMcCoy/models/bert_19
 
+
 datafpath: ../midterm/ReplicateMcCoy/data/MNLI_dataset.tsv
 
 predfpath: ../midterm/ReplicateMcCoy/predictions/mnli_pred.tsv
 
 resultsfpath: ../midterm/ReplicateMcCoy/results/mnli_bytarget.tsv
 
-id2label:
-    0: contradiction
-    1: entailment
-    2: neutral
-
 conditions: target
 
 save: by_cond
 
 device: cuda
-
-

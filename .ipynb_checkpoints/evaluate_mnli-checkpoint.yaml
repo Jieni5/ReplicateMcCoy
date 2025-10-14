@@ -27,21 +27,18 @@ models:
         - ../midterm/ReplicateMcCoy/models/bert_18
         - ../midterm/ReplicateMcCoy/models/bert_19
 
-
 datafpath: ../midterm/ReplicateMcCoy/data/MNLI_dataset.tsv
 
 predfpath: ../midterm/ReplicateMcCoy/predictions/mnli_pred.tsv
 
 resultsfpath: ../midterm/ReplicateMcCoy/results/mnli_bytarget.tsv
 
-giveAllLabels: False
-
 id2label:
-    0: entailment
-    1: contradiction
-    2: neutral 
+    0: contradiction
+    1: entailment
+    2: neutral
 
-conditions: target, condition
+conditions: target
 
 save: by_cond
 

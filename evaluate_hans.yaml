@@ -28,11 +28,11 @@ models:
         - ../midterm/ReplicateMcCoy/models/bert_19
 
 
-datafpath: ../midterm/ReplicateMcCoy/data/HANS_dataset.tsv
+datafpath: ../midterm/ReplicateMcCoy/data/MNLI_dataset.tsv
 
-predfpath: ../midterm/ReplicateMcCoy/predictions/hans_pred.tsv
+predfpath: ../midterm/ReplicateMcCoy/predictions/mnli_pred.tsv
 
-resultsfpath: ../midterm/ReplicateMcCoy/results/hans_results.tsv
+resultsfpath: ../midterm/ReplicateMcCoy/results/mnli_bytarget.tsv
 
 conditions: condition
 
