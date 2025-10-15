@@ -28,19 +28,19 @@ models:
         - ../midterm/ReplicateMcCoy/models/bert_19
 
 
-datafpath: ../midterm/ReplicateMcCoy/data/MNLI_dataset.tsv
+datafpath: ../midterm/ReplicateMcCoy/data/HANS_dataset.tsv
 
-predfpath: ../midterm/ReplicateMcCoy/predictions/mnli_pred.tsv
+predfpath: ../midterm/ReplicateMcCoy/predictions/hans_pred.tsv
 
-resultsfpath: ../midterm/ReplicateMcCoy/results/mnli_bytarget.tsv
+resultsfpath: ../midterm/ReplicateMcCoy/results/hans_result.tsv
 
-conditions: condition
+conditions: target, heuristic
 
 save: by_cond
 
 id2label:
-    0: entailment
-    1: non-entailment
+    0: non-entailment
+    1: entailment
     2: non-entailment
 
 device: cuda
